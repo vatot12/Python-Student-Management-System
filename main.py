@@ -17,6 +17,7 @@ def add_student(students_list):
     return student_added
 
 def get_student_average(students_list):
+    averaged = False
     student_averaged = input("Enter student's name")
     for i in students_list:
         if i["name"] == student_averaged:
@@ -24,8 +25,6 @@ def get_student_average(students_list):
             average = avg_step / 3
             print(f"{i["name"]}'s Average is {average}")
             averaged = True
-        else:
-            averaged = False
         if averaged == False:
             print("Not found")
 
